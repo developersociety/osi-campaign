@@ -1,0 +1,182 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'opensans', Arial, sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+a {
+    color: #1E531D;
+}
+
+header, footer, main, aside {
+    margin: 0;
+    padding: 1rem;
+}
+
+header div, footer div, main div, aside form {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 960px;
+
+}
+
+header {
+    background: black;
+    color: white;
+}
+
+header h1 {
+    display: block;
+    background: url('../img/logo.svg') top center no-repeat;
+    background-size: 100%;
+    max-width: 23.4375rem;
+    height: 5.875rem;
+    text-indent: -100rem;
+    overflow: hidden;
+    margin: 0 0 3rem 0;
+    width: 100%;
+}
+
+#skiptocontent {
+	padding: .3rem;
+	position: absolute;
+	top: -3rem;
+	left: 0;
+	color: white;
+	background: red;
+	-webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 100;
+}
+
+#skiptocontent:focus {
+	position: absolute;
+	left: 0;
+	top: 0;
+	-webkit-transition: top .1s ease-in;
+    transition: top .1s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#skiptocontent {
+		transition-duration: 0.001ms !important;
+	}
+}
+
+h2 {
+    font-size: 4.5rem;
+    font-size: min(max(1.5rem, 7.258vw), 72px);
+    line-height: 0.9;
+    font-weight: bold;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-size: min(max(1.1rem, 2.419vw), 24px);
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+aside form {
+    background: #1E531D;
+    color: white;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+aside h2, aside h3 {
+    margin: 0;
+}
+
+label {
+    display: block;
+    line-height: 2;
+}
+
+input, button {
+    display: block;
+    width: calc(100% - 10px);
+    border: 5px solid white;
+    font-size: 1.125rem;
+    line-height: 2.5;
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+label[for=name], label[for=email] {
+    display: none;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    display: block;
+    float: left;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #1E531D;
+    border: 2px solid white;
+    margin: 0.25rem 1rem 1rem 0;
+}
+
+button {
+    width: calc(100%);
+    border: 5px solid #32852E;
+    margin: 0;
+    padding: 0;
+    background: #32852E;
+    font-weight: 700;
+    color: white;
+}
+
+details {
+    padding: 0 1rem 1rem;
+    margin: 0;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+summary {
+    padding: 1rem 1rem 0 1rem;
+    margin: 0 -1rem 0 -1rem;
+    list-style: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+summary:after {
+    content: '+';
+    background: green;
+    color: white;
+    float: right;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+details[open] summary:after {
+    content: '-';
+}
+
+summary:hover {
+    cursor: pointer;
+}
+
+summary:hover:after {
+    background: black;
+}
+
+footer {
+    background: #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+    color: #666;
+    margin: 2rem 0 0 0;
+}
