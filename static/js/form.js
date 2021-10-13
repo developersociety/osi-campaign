@@ -1,5 +1,6 @@
 const form = document.getElementById('membership-form')
 const submitButton = form.querySelector('button[type=submit]')
+const nameInput = form.querySelector('input[name  =name]')
 
 const makeStripePayment = () => {
   // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
@@ -24,7 +25,7 @@ const makeStripePayment = () => {
         mode: 'subscription',
         lineItems: [{ price: 'price_1JjQ5LAL5YtKKJj5KS3lH6U9', quantity: 1 }],
         successUrl:
-          DOMAIN + 'thank-you.html?session_id={CHECKOUT_SESSION_ID}',
+          DOMAIN + 'thank-you.html?session_id={CHECKOUT_SESSION_ID}' + `&name=${nameInput.value}`,
         cancelUrl:
           DOMAIN + 'canceled.html?session_id={CHECKOUT_SESSION_ID}',
       })
