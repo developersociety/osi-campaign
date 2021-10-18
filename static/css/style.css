@@ -1,6 +1,9 @@
 :root {
     --main-width: 54rem;
     --sidebar-width: 26rem;
+    --light-green: #89c987;
+    --text-colour: #444444;
+    --vertical-spacing: 1.75rem;
 }
 
 html {
@@ -12,6 +15,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'opensans', Arial, sans-serif;
+    color: var(--text-colour);
     font-size: 100%;
     line-height: 1.5;
     display: grid;
@@ -81,6 +85,10 @@ a {
     grid-area: main;
 }
 
+.main > *+* {
+    margin: var(--vertical-spacing) 0 0 0;
+}
+
 .intro,
 .main {
     max-width: var(--main-width);
@@ -90,6 +98,22 @@ a {
     max-width: var(--sidebar-width);
     grid-area: sidebar;
     z-index: 1;
+}
+
+.box-out {
+    background-color: var(--light-green);
+    border-radius: 0.375rem;
+    margin: var(--vertical-spacing) -2rem 0;
+    padding: 2rem;
+    padding-left: 3rem;
+}
+
+.box-out > *+* {
+    margin-top: 1rem;
+}
+
+.box-out span {
+    font-weight: bold;
 }
 
 footer {
