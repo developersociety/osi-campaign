@@ -12,7 +12,7 @@
     <link rel="alternate" hreflang="es" href="https://opensource.org/es">
 
     <meta name="theme-color" content="#0b0c0c">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="og:title" content="Join the Open Source Initiative">
     <meta name="description" content="Open Source Initiative - Join us">
@@ -71,16 +71,21 @@
 <body>
     <a href="#main-content" id="skiptocontent">Skip to main content</a>
     <a name="top"></a>
-
-    <header>
-        <div>
-            <h1>Open Source Initiative</h1>
-            <h2>Become a Member</h2>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
-        </div>
+    <nav class="navigation">
+        <h1>Open Source Initiative</h1>
+    </nav>
+    <header class="intro">
+        <h2>Become a Member</h2>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
     </header>
 
-    <aside>
+    <picture class="header-image">
+        <source srcset="static/img/audience.webp" type="image/webp">
+        <source srcset="static/img/audience.jpg" type="image/jpeg">
+        <img src="static/img/audience.jpg" alt="An audience in an auditorium representing the Open Source Initiative community.">
+    </picture>
+
+    <aside class="sidebar">
         <form id="membership-form">
             <h3>Title goes here</h3>
             <h4><em>Sub</em>/title</h4>
@@ -94,46 +99,44 @@
         </form>
     </aside>
 
-    <main id="main-content">
-        <div>
-            <h2>Join the movement Today</h2>
-            <p>The Open Source Initiative (OSI) is a member-driven community, and as such we offer a variety of opportunities for individuals, open source projects & foundations, public sector organizations, institutions of higher education, and
-                businesses to
-                join and contribute to our mission.</p>
-            <h3>Why become a member?</h3>
-            <p>Becoming an OSI Individual Member provides several benefits. From an organizational and operational perspective, Individual Members enjoy a direct role in defining the direction and identifying the leadership of the OSI. Each year OSI
-                Individual Members may nominate and vote for OSI Board Directors, as well as run for a Director seat themselves. With five members of the Board representing the Individual Membership, as a constituent you're a vital part of the OSI
-                and
-                the open source community.</p>
-            <p>In addition to your role within OSI governance and leadership, OSI Individuals also receive several premiums through our Affiliate Members and Corporate Sponsors. These currently include:</p>
-            <ul>
-                <li>20% off training from Linux Foundation. The Linux Foundation is uniquely positioned to provide the high quality, vendor neutral training on a range of cutting edge technologies like Kubernetes and Blockchain.</li>
-                <li>15% off Open Source Technology Management online courses at Brandeis University</li>
-                <li>15% off IT Leadership and IT Management training, workshops, and coaching from Hallmentum</li>
-                <li>10% off at Adafruit.com, an Open-Source Hardware manufacturer.</li>
-            </ul>
+    <main id="main-content" class="main">
+        <h2>Join the movement Today</h2>
+        <p>The Open Source Initiative (OSI) is a member-driven community, and as such we offer a variety of opportunities for individuals, open source projects & foundations, public sector organizations, institutions of higher education, and
+            businesses to
+            join and contribute to our mission.</p>
+        <h3>Why become a member?</h3>
+        <p>Becoming an OSI Individual Member provides several benefits. From an organizational and operational perspective, Individual Members enjoy a direct role in defining the direction and identifying the leadership of the OSI. Each year OSI
+            Individual Members may nominate and vote for OSI Board Directors, as well as run for a Director seat themselves. With five members of the Board representing the Individual Membership, as a constituent you're a vital part of the OSI
+            and
+            the open source community.</p>
+        <p>In addition to your role within OSI governance and leadership, OSI Individuals also receive several premiums through our Affiliate Members and Corporate Sponsors. These currently include:</p>
+        <ul>
+            <li>20% off training from Linux Foundation. The Linux Foundation is uniquely positioned to provide the high quality, vendor neutral training on a range of cutting edge technologies like Kubernetes and Blockchain.</li>
+            <li>15% off Open Source Technology Management online courses at Brandeis University</li>
+            <li>15% off IT Leadership and IT Management training, workshops, and coaching from Hallmentum</li>
+            <li>10% off at Adafruit.com, an Open-Source Hardware manufacturer.</li>
+        </ul>
 
-            <details>
-                <summary>Who can join?</summary>
-                Something small enough to escape casual notice.
-            </details>
-            <details>
-                <summary>Why should we join?</summary>
-                Something small enough to escape casual notice.
-            </details>
-            <details>
-                <summary>What is the commitment?</summary>
-                Something small enough to escape casual notice.
-            </details>
-            <details>
-                <summary>What are the membership fees?</summary>
-                Something small enough to escape casual notice.
-            </details>
-            <details>
-                <summary>How do I sign up?</summary>
-                Something small enough to escape casual notice.
-            </details>
-        </div>
+        <details>
+            <summary>Who can join?</summary>
+            Something small enough to escape casual notice.
+        </details>
+        <details>
+            <summary>Why should we join?</summary>
+            Something small enough to escape casual notice.
+        </details>
+        <details>
+            <summary>What is the commitment?</summary>
+            Something small enough to escape casual notice.
+        </details>
+        <details>
+            <summary>What are the membership fees?</summary>
+            Something small enough to escape casual notice.
+        </details>
+        <details>
+            <summary>How do I sign up?</summary>
+            Something small enough to escape casual notice.
+        </details>
 
     </main>
 
