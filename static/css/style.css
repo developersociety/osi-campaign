@@ -2,6 +2,8 @@
     --main-width: 54rem;
     --sidebar-width: 26rem;
     --light-green: #89c987;
+    --bright-green: #3da639;
+    --deep-green: #1E531D;
     --text-colour: #444444;
     --vertical-spacing: 1.75rem;
 }
@@ -19,7 +21,7 @@ body {
     font-size: 100%;
     line-height: 1.5;
     display: grid;
-    grid-template-columns: auto max-content 3rem max-content auto;
+    grid-template-columns: auto max-content 6rem max-content auto;
     grid-template-areas:
         "nav    nav     nav     nav     nav     "
         ".      intro   .       sidebar .       "
@@ -85,13 +87,20 @@ a {
     grid-area: main;
 }
 
-.main > *+* {
+.main > *+*,
+aside form > *+* {
     margin: var(--vertical-spacing) 0 0 0;
 }
 
 .intro,
 .main {
     max-width: var(--main-width);
+}
+
+.intro p {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 32px;
 }
 
 .sidebar {
@@ -158,7 +167,8 @@ header div, footer div, main div, aside form {
 	}
 }
 
-h2 {
+h2,
+.h2 {
     font-size: 4.5rem;
     font-size: min(max(1.5rem, 7.258vw), 72px);
     line-height: 0.9;
@@ -166,22 +176,37 @@ h2 {
     margin: 0;
 }
 
-h3 {
-    font-size: 1.5rem;
-    font-size: min(max(1.1rem, 2.419vw), 24px);
+h3,
+.h3 {
+    font-size: min(max(3rem, 2.419vw), 3rem);
     line-height: 1.2;
-    font-weight: normal;
+    font-weight: bold;
+    color: var(--bright-green);
+
+}
+
+h4,
+.h4 {
+    font-size: min(max(1.5rem, 2.419vw), 1.5rem);
+    line-height: 1;
+    font-weight: bold;
+}
+
+h4 em {
+    font-size: 4rem;
+    font-style: normal;
 }
 
 aside form {
-    background: #1E531D;
+    background: var(--deep-green);
     color: white;
     border-radius: 8px;
     padding: 2rem;
 }
 
-aside h2, aside h3 {
+aside form h2, aside form h3 {
     margin: 0;
+    color: white;
 }
 
 label {
@@ -241,10 +266,10 @@ input[type=checkbox]:checked + label[for=terms]::after {
 
 button {
     width: calc(100%);
-    border: 5px solid #32852E;
+    border: 5px solid var(--bright-green);
     margin: 0;
     padding: 0;
-    background: #32852E;
+    background: var(--bright-green);
     font-weight: 700;
     color: white;
     margin-top: 1rem;
@@ -254,7 +279,11 @@ details {
     padding: 0 1rem 1rem;
     margin: 0;
     transition: all 0.3s ease;
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 2px solid #e8e8e8;
+}
+
+details > *+* {
+    margin-top: 1rem;
 }
 
 summary {
@@ -267,7 +296,8 @@ summary {
 
 summary:after {
     content: '+';
-    background: green;
+    background:var(--deep-green);
+    border-radius: 0.1875rem;
     color: white;
     float: right;
     width: 1.5rem;
