@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Open Source Initiative</title>
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="shortcut icon" sizes="16x16 32x32 48x48 128x128 256x256 512x512" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.icns">
+
+    <link rel="alternate" hreflang="es" href="https://opensource.org/es">
+
+    <meta name="theme-color" content="#0b0c0c">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="og:title" content="Join the Open Source Initiative">
+    <meta name="description" content="Open Source Initiative - Join us">
+    <meta name="og:description" content="Open Source Initiative - Join us">
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self'"> -->
+    <meta name="theme-color" content="#1E531D">
+
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script type="text/javascript">
+        var userLang = navigator.language || navigator.userLanguage;
+        if (userLang == "fr") {
+            window.location.href = "www.google.com"
+        }
+
+    </script>
+
+    <style media="all">
+        @font-face {
+            font-family: 'opensans';
+            src: local('OpenSans'), url('static/fonts/OpenSans-Regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'opensans';
+            src: local('OpenSans'), url('static/fonts/OpenSans-Italic-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'opensans';
+            src: local('OpenSans'), url('static/fonts/OpenSans-Bold-webfont.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'opensans';
+            src: local('OpenSans'), url('static/fonts/OpenSans-ExtraBold-webfont.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" id="skiptocontent">Skip to main content</a>
+    <a name="top"></a>
+    <nav class="navigation">
+        <h1>Open Source Initiative</h1>
+    </nav>
+    <header class="intro">
+        <h2>Support Open Source</h2>
+        <p>Only with a strong and active member base can we continue in our role as the internationally recognized nexus of trust, the foundation for, and authority in open source software.</p>
+        <p>Being an OSI member is a great way to get directly involved in open source community development and advocacy. Don't think of this as helping just one open source project—think about helping all open source projects.</p>
+    </header>
+
+    <picture class="header-image">
+        <source srcset="static/img/audience.webp" type="image/webp">
+        <source srcset="static/img/audience.jpg" type="image/jpeg">
+        <img src="static/img/audience.jpg" alt="An audience in an auditorium representing the Open Source Initiative community.">
+    </picture>
+
+    <aside class="sidebar">
+        <form id="membership-form">
+            <h3 class="h4">individual</h3>
+            <h4><em>$40</em> / year</h4>
+            <label for="name">name</label>
+            <input type="text" name="name" placeholder="Name" id="name" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Email" id="email" required>
+            <input type="checkbox" name="terms" id="terms" required>
+            <label for="terms">I have read and agree to the OSI privacy policy.</label>
+            <button type="submit">Sign me up</button>
+        </form>
+        <div>
+            <h4>
+                <span>New members</span>
+                <svg width="40" height="27" xmlns="http://www.w3.org/2000/svg"><path d="M20.833 13.25c5.063 0 9.167 4.078 9.167 9.11v4.14H10v-4.14c0-5.032 4.104-9.11 9.167-9.11Zm11.667-.828c4.142 0 7.5 3.337 7.5 7.453v2.484h-7.5a11.548 11.548 0 0 0-4.716-9.29 7.504 7.504 0 0 1 3.05-.647Zm-23.333 0c1.05 0 2.09.22 3.049.648A11.548 11.548 0 0 0 7.5 22.36H0v-2.485c0-4.116 3.358-7.453 7.5-7.453ZM20 0c3.222 0 5.833 2.595 5.833 5.797 0 3.201-2.611 5.797-5.833 5.797s-5.833-2.596-5.833-5.797C14.167 2.595 16.778 0 20 0ZM8.333 2.484c2.302 0 4.167 1.854 4.167 4.141s-1.865 4.14-4.167 4.14c-2.3 0-4.166-1.853-4.166-4.14s1.865-4.14 4.166-4.14Zm23.334 0c2.3 0 4.166 1.854 4.166 4.141s-1.865 4.14-4.166 4.14c-2.302 0-4.167-1.853-4.167-4.14s1.865-4.14 4.167-4.14Z" fill="#444"/></svg>
+            </h4>
+            <member-list>
+                <!-- Web Component root -->
+            </member-list>
+        </div>
+    </aside>
+
+    <main id="main-content" class="main">
+        <h3>Become a member of OSI today</h3>
+        <p>The Open Source Initiative (OSI) is a non-profit corporation with global scope formed to educate about and advocate for the benefits of open source and to build bridges among different constituencies in the open source community.</p>
+        <p>As a member-driven community the OSI offers a variety of opportunities for individuals, open source projects & foundations, public sector organizations, institutions of higher education, and businesses to join and contribute to our mission.</p>
+        <p>Individual members are individuals who are part of the open source community and who have decided to declare their support for the open source software movement.</p>
+
+        <h4>Membership levels</h4>
+
+        <div>
+            <details>
+                <summary>Individual Members - $40/year</summary>
+                <ul>
+                    <li>Define the direction and identify the leadership of the OSI by nominating and voting for OSI Board Directors.</li>
+                    <li>You can run for a Director seat. Five members of the Board represent the Individual Membership, and play a vital role in the open source community.
+                    </li>
+                    <li>Receive exclusive offers through our Affiliate Members and Corporate Sponsors. These currently include:
+                        <ol>
+                            <li>20% off training from Linux Foundation. The Linux Foundation is uniquely positioned to provide the high quality, vendor neutral training on a range of cutting edge technologies like Kubernetes and Blockchain.</li>
+                            <li>15% off Open Source Technology Management online courses at Brandeis University</li>
+                            <li>15% off IT Leadership and IT Management training, workshops, and coaching from Hallmentum</li>
+                            <li>10% off at Adafruit.com, an Open-Source Hardware manufacturer.</li>
+                        </ol>
+                    </li>
+                    <li>Receive a “OSI Member badge” that can be added to websites, blogs, etc. to let the community know they support open source.
+                    </li>
+                </ul>
+            </details>
+            <details>
+                <summary>Basic Members - $0 (free)</summary>
+                <ul>
+                    <li>Receive a “Virtual OSI Member badge” that can be added to websites, blogs, etc. to let the community know they support open source.</li>
+                    <li>Voting rights are <strong>not</strong> included in the level</li>
+                </ul>
+            </details>
+        </div>
+
+        <div class="box-out">
+            <h4>Community Quotes</h4>
+            <ul>
+                <li>"If the highly accessible, transparent, open, and earnest nature of the people in our community is anything to go by, there are plenty of reasons to think that we've not only got a great community undergirding the movement, but also plenty of reasons to simply be hopeful for what the future might bring. I think that everyone can have a role to play in giving life to the activism of the open source community -- the OSI is a great place to do just that." <span>Vladimir Bejdo</span></li>
+                <li>"The Open Source Initiative means, to me, the guardian of the letter and the spirit of open source. A lot of business value is built on open source software, and yet not that many companies sponsor the OSI. A lot of individual careers have been built on open source, and yet not that many people are OSI members. Funding the OSI ensures that it can continue that important work, and can tackle future challenges and threats." <span>Thierry Carrez, OSI Board Director, VP of Engineering - Open Infrastructure Foundation</span></li>
+                <li>"OSI has been quietly important to the success of the Open Source model for two decades. Beyond just licensing, it [OSI] effectively challenges abuse while planting seeds of advocacy globally across communities and industries. Supporting OSI means continuing and growing this approach to undramatic but effective stewardship of open source." <span>Simon Phipps, Meshed Insights Ltd</span></li>
+                <li>"Over the past 20+ years, open source has – often invisibly – helped shape our digital world. It has enabled business collaboration on technologies that are foundational to society, empowered individuals with rights to the software we use every day, and elevated countless contributors' careers. OSI's stewardship of the legal instruments, which underpin all open source software, helps make this possible. I encourage you to support the OSI's growth so it may continue to raise awareness of the mission and tackle emerging challenges to the use of open source."      - <span>Aeva Black, Open Source Hacker, Azure Office of the CTO</span></li>
+                <li>"I believe that a healthy and sustaining open source ecosystem is vital to improving our forever growing vast digital world. As a member of OSI, I support and contribute to the organization championing the roles of educator and advocate around the policies and principles of open source–we impact the intention and execution with which all open source is built. Partnering with OSI by sponsoring our work is an investment in strengthening the collaborative threads of open communities and individuals, through pragmatic education and advocacy of open source policies and principles. It is an investment in the future of a thriving open source ecosystem." <span>Tracy Hinds, OSI Board Director</span></li>
+                <li>"I'm proud to be an OSI member because as more and more folks become users and participants in the open source software community, we need the OSI to maintain a clear line on what open source means and to hold a space for practitioners to share their knowledge with each other." <span>Deb Nicholson, Former OSI General Manager</span></li>
+                <li>"The OSI does foundational work in reviewing and approving open source licenses, which are licenses that assure that software can be freely used and shared by both individuals and commercial, educational, government and nonprofit entities without any royalty obligations. The software industry would not be where it is today without the OSI's important work in assuring that the licenses that it approves deliver on the promise of open source." - <span>Pamela S. Chestek, OSI Board Director & License Committee Chair</span></li>
+                <li>“I decided to join OSI as a member because I am strongly convinced that open source software needs a stronger independent representation, which is leveraging OSS strengths to grow the community and the industry, and at the same time is educating individuals and enterprises about the unique advantages of free software.” <span>Italo Vignoli - OSI Board Director</span></li>
+                <li>I see open source as a solution for sustainability development. We need a complete shift of paradigm from a closed proprietary competition mindset to an open and collaborative way of solving the global issues. I call for individuals to support and participate in the open source movement. Only by working together can we make bigger strides in solving the world’s most pressing problems.” <span>Hong Phuc Dang, Founder, FOSSASIA</span></li>
+                <li>The OSI does foundational work in reviewing and approving open source licenses, which are licenses that assure that software can be freely used and shared by both individuals and commercial, educational, government and nonprofit entities without any royalty obligations. The software industry would not be where it is today without the OSI's important work in assuring that the licenses that it approves deliver on the promise of open source. <span>Pamela S. Chestek, OSI Board Director & License Committee Chair</span></li>
+
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <p>Made with ❤️ by people from <a href="https://dev.ngo" rel="noopener">The Developer Society</a>.</p>
+        </div>
+    </footer>
+    <script src="/static/js/form.js"></script>
+    <script src="/static/js/components/member-list/member-list.js"></script>
+</body>
+
+</html>

@@ -61,7 +61,7 @@ class memberList extends HTMLElement {
     // populate template
     memberTemplate.querySelector('a').href = `https://twitter.com/${obj.twitter_handle}`
     memberTemplate.querySelector('#name').innerText = obj.name
-    memberTemplate.querySelector('#twitter').innerText = `@${obj.twitter_handle}`
+    if (obj.twitter_handle) memberTemplate.querySelector('#twitter').innerText = `@${obj.twitter_handle}`
     memberTemplate.querySelector('#message').innerText = `"${obj.message}"`
     memberTemplate.querySelector('#time-stamp').innerText = formattedTime
 
