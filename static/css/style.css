@@ -117,7 +117,7 @@ aside form > *+* {
     padding-left: 3rem;
 }
 
-.box-out > *+* {
+.box-out ul > *+* {
     margin-top: 1rem;
 }
 
