@@ -30,10 +30,6 @@ const makeStripePayment = async () => {
 
   const zapier_submission = await fetch('https://hooks.zapier.com/hooks/catch/576272/bh4m1pl/', {
     method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
     body: JSON.stringify(data)
   });
 
