@@ -1,4 +1,11 @@
-function load() {
+async function fetchBadge() {
+    const fetchBadge = await fetch('../static/img/osi-badge-base.svg');
+    const svgTemplate = await fetchBadge.text();
+    return svgTemplate;
+}
+
+
+async function load() {
   const greeting = document.querySelector('.js-greeting')
   const params = new URLSearchParams(window.location.search)
   const name = params.get('name')
@@ -16,13 +23,15 @@ function load() {
     // Personalise the greeting
     greeting.innerText = `${greeting.innerText.slice(0, -1)} ${name}!`
 
-    // build an SVG
+    // build an SVG patter
     const nameAsSlug = slugify(name)
     const pattern = GeoPattern.generate(nameAsSlug)
     const svgContainer = document.querySelector('.svg-container')
 
-    svgContainer.innerHTML = pattern.toSvg()
+    const badge = await fetchBadge()
+    svgContainer.innerHTML = badge;
   }
+
 }
 
 window.onload = load
