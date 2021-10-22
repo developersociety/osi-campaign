@@ -25,11 +25,17 @@ async function load() {
 
     // build an SVG patter
     const nameAsSlug = slugify(name)
-    const pattern = GeoPattern.generate(nameAsSlug)
+    let pattern = GeoPattern.generate(nameAsSlug)
+    pattern = pattern.toDataUri()
+
     const svgContainer = document.querySelector('.svg-container')
 
     const badge = await fetchBadge()
-    svgContainer.innerHTML = badge;
+    const badgeTemplate = new DOMParser().parseFromString(badge, 'text/html').querySelector('svg')
+    const imageTag = badgeTemplate.querySelector('image')
+    imageTag.setAttribute('href', pattern)
+
+    svgContainer.append(badgeTemplate);
   }
 
 }
