@@ -18,9 +18,7 @@ function load() {
 
     // build an SVG
     const nameAsSlug = slugify(name)
-    const now = new Date().getTime()
-    const seed = nameAsSlug + now
-    const pattern = GeoPattern.generate(seed)
+    const pattern = GeoPattern.generate(nameAsSlug)
     const svgContainer = document.querySelector('.svg-container')
 
     svgContainer.innerHTML = pattern.toSvg()

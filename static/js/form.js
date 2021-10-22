@@ -41,6 +41,7 @@ const makeAPIcalls = async () => {
   // Make the call to Stripe.js to redirect to the checkout page
   // with the sku or plan ID.
   if (membershipInput.value === "individual") {
+    // handle payment
     stripe
       .redirectToCheckout({
         mode: 'subscription',
@@ -51,6 +52,9 @@ const makeAPIcalls = async () => {
         DOMAIN + 'index.html?status=cancelled'
       })
       .then(handleResult);
+  } else {
+    // redirect to thank you
+    window.location.href += `thank-you.html?name=${nameInput.value}`
   }
 }
 

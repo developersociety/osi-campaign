@@ -34,6 +34,15 @@ body {
     ;
 }
 
+.thank-you {
+    grid-template-areas:
+        "nav    nav     nav     nav     nav     "
+        ".      intro   .       .       .       "
+        ".      main    .       sidebar .       "
+        "footer footer  footer  footer  footer  "
+    ;
+}
+
 a {
     color: #1E531D;
 }

@@ -42,12 +42,12 @@ class memberList extends HTMLElement {
   }
 
   async getMembers() {
-    const response = await fetch('static/js/components/member-list/members.json');
+    const response = await fetch('../static/js/components/member-list/members.json');
     return response.json().then(data => data)
   }
 
   async getTemplate() {
-    const response = await fetch('static/js/components/member-list/member-list.html');
+    const response = await fetch('../static/js/components/member-list/member-list.html');
     let template = await response.text().then(data => data)
     template = new DOMParser().parseFromString(template, 'text/html')
     .querySelector('template')
