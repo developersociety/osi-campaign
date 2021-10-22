@@ -2,7 +2,7 @@
     --main-width: 54rem;
     --sidebar-width: 26rem;
     --light-green: #89c987;
-    --bright-green: #3da639;
+    --bright-green: #328633;
     --deep-green: #1E531D;
     --text-colour: #444444;
     --vertical-spacing: 1.75rem;
@@ -329,6 +329,7 @@ button {
     margin: 0;
     padding: 0;
     background: var(--bright-green);
+    border-radius: 2px;
     font-weight: 700;
     color: white;
     margin-top: 1rem;
