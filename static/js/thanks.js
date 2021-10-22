@@ -36,6 +36,12 @@ async function load() {
     imageTag.setAttribute('href', pattern)
 
     svgContainer.append(badgeTemplate);
+
+    // create the download
+    const downloadLink = document.querySelector('.download-button')
+    const file = new Blob([svgContainer.innerHTML], {type : 'image/svg+xml'});
+    const badgeURL = URL.createObjectURL(file)
+    downloadLink.setAttribute('href', badgeURL)
   }
 
 }
