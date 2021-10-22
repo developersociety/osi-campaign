@@ -169,6 +169,20 @@ aside form > *+* {
     font-weight: bold;
 }
 
+.member-list--desktop {
+    display: none;
+}
+
+@media all and (min-width: 70rem) {
+    .member-list--mobile {
+        display: none;
+    }
+
+    .member-list--desktop {
+        display: block;
+    }
+}
+
 footer {
     grid-area: footer;
 }
