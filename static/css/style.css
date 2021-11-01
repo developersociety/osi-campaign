@@ -3,6 +3,7 @@
     --sidebar-width: 26rem;
     --light-green: #89c987;
     --bright-green: #328633;
+    --bright-green-hover: #2b752c;
     --deep-green: #1E531D;
     --text-colour: #444444;
     --vertical-spacing: 1.75rem;
@@ -333,6 +334,11 @@ button {
     font-weight: 700;
     color: white;
     margin-top: 1rem;
+}
+
+button:hover {
+    background: var(--bright-green-hover);
+    cursor: pointer;
 }
 
 details {
