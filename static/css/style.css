@@ -272,7 +272,7 @@ label {
     line-height: 2;
 }
 
-input, button, select {
+input, button, select, .button {
     display: block;
     width: 100%;
     border: 5px solid white;
@@ -323,7 +323,7 @@ input[type=checkbox]:checked + label[for=terms]::after {
     border-width: 0px 0px 2px 2px;
 }
 
-button {
+button, .button {
     width: calc(100%);
     border: 5px solid var(--bright-green);
     margin: 0;
@@ -335,7 +335,7 @@ button {
     margin-top: 1rem;
 }
 
-button:hover {
+button:hover, .button:hover {
     background: var(--bright-green-hover);
     cursor: pointer;
 }
@@ -388,4 +388,8 @@ footer {
     border-top: 1px solid #e8e8e8;
     color: #666;
     margin: 2rem 0 0 0;
+}
+
+.svg-container {
+    width: 50%;
 }
