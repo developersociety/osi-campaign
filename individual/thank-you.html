@@ -97,6 +97,26 @@
     </main>
 
     <aside class="sidebar">
+        <div id="paypal-button-container-P-0X907707YT156372PMGBDALY"></div>
+        <script src="https://www.paypal.com/sdk/js?client-id=AeZMGAcesc-1Nk4x4NgdO1pRkxjkSr_mAeJFOX5GTGeVgI7yISH7UHMIThdLad1rjkxw2XaU7XwBiyne&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+        <script>
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'subscribe'
+            },
+            createSubscription: function(data, actions) {
+                return actions.subscription.create({
+                    plan_id: 'P-0X907707YT156372PMGBDALY'
+                });
+            },
+            onApprove: function(data, actions) {
+                alert(data.subscriptionID); // You can add optional success message for the subscriber here
+            }
+        }).render('#paypal-button-container-P-0X907707YT156372PMGBDALY'); // Renders the PayPal button
+        </script>
         <div>
             <h4>
                 <span>New members</span>
