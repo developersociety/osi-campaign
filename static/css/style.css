@@ -335,6 +335,11 @@ button, .button {
     margin-top: 1rem;
 }
 
+.button {
+    text-align: center;
+    text-decoration: none;
+}
+
 button:hover, .button:hover {
     background: var(--bright-green-hover);
     cursor: pointer;
