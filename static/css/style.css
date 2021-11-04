@@ -345,6 +345,10 @@ button:hover, .button:hover {
     cursor: pointer;
 }
 
+form a {
+    color: white;
+}
+
 details {
     padding: 0 1rem 1rem;
     margin: 0;
