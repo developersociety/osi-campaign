@@ -32,7 +32,7 @@ class memberList extends HTMLElement {
       this.addListItem(member, this.template, this.parentList)
       this.i++
       this.addMembersLoop()
-    } else {
+    } else if (this.i < this.members.length - 1) {
     setTimeout(() => {
         this.addListItem(member, this.template, this.parentList);
         this.i++
