@@ -78,6 +78,7 @@
         <div>
             <h2>Thank you and<br /> well done!</h2>
             <p>You’re now a member of the Open Source Initiative</p>
+            
         </div>
     </header>
 
@@ -90,10 +91,37 @@
     <main id="main-content" class="main">
         <h3 class="js-greeting">Thank you for joining!</h3>
 
+        <p>Sign up to become a full member of the OSI: vote to elect the next board of directors and sustain the open source movement for only $40 per year.</p>
+
+        <div id="paypal-button-container-P-0X907707YT156372PMGBDALY"></div>
+        <script src="https://www.paypal.com/sdk/js?client-id=AeZMGAcesc-1Nk4x4NgdO1pRkxjkSr_mAeJFOX5GTGeVgI7yISH7UHMIThdLad1rjkxw2XaU7XwBiyne&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+        <script>
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'Subscribe'
+            },
+            createSubscription: function(data, actions) {
+                return actions.subscription.create({
+                    plan_id: 'P-0X907707YT156372PMGBDALY'
+                });
+            },
+            onApprove: function(data, actions) {
+                alert(data.subscriptionID); // You can add optional success message for the subscriber here
+            }
+        }).render('#paypal-button-container-P-0X907707YT156372PMGBDALY'); // Renders the PayPal button
+        </script>
+
+        <hr />
+
         <p>This unique badge is yours forever! OSI members are already sharing them on their social media channels.</p>
 
         <div class="svg-container"></div>
         <a href="" class="download-button button" download="osi_membership_badge.svg">Download Badge SVG</a>
+
+        <hr />
 
         <h3>Tell your friends you're joined too!</h3>
         
@@ -112,6 +140,7 @@
 
     <footer>
         <div>
+            <p>The content on this website, of which Opensource.org is the author, is licensed under a Creative Commons Attribution 4.0 International License.</p>
             <p>Made with ❤️ by people from <a href="https://dev.ngo" rel="noopener">The Developer Society</a>.</p>
         </div>
     </footer>
