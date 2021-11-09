@@ -21,7 +21,7 @@ async function load() {
 
   if (name) {
     // Personalise the greeting
-    greeting.innerText = `${greeting.innerText.slice(0, -1)} ${name}!`
+    // greeting.innerText = `${greeting.innerText.slice(0, -1)} ${name}!`
 
     // build an SVG patter
     const nameAsSlug = slugify(name)
