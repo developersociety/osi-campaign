@@ -42,7 +42,6 @@ body {
         "nav"
         "intro"
         "main"
-        "sidebar"
         "footer"
     ;
 }
@@ -59,11 +58,12 @@ body {
     }
 
     .thank-you {
+	grid-template-columns: auto minmax(auto, max-content) auto;
         grid-template-areas:
-        "nav    nav     nav     nav     nav     "
-        ".      intro   .       .       .       "
-        ".      main    .       sidebar .       "
-        "footer footer  footer  footer  footer  "
+        "nav    nav     nav     "
+        ".      intro   .       "
+        ".      main    .       "
+        "footer footer  footer  "
         ;
     }
 }
