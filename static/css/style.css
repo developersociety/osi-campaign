@@ -229,7 +229,7 @@ h2,
 .h2 {
     font-size: 4.5rem;
     font-size: min(max(1.5rem, 7.258vw), 72px);
-    line-height: 0.9;
+    line-height: 1;
     font-weight: bold;
     margin: 0;
 }
@@ -344,6 +344,8 @@ button:hover, .button:hover {
     background: var(--bright-green-hover);
     cursor: pointer;
 }
+
+.thank-you .button { max-width:50%; }
 
 form a {
     color: white;
