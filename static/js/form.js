@@ -14,6 +14,21 @@ const makeAPIcalls = async () => {
             displayError.textContent = result.error.message;
         }
     };
+    
+    const zapier_data = {
+        name: nameInput.value,
+        email: emailInput.value,
+        country: countryInput.value,
+        membership: membershipInput.value,
+        'opt-in': true
+    }
+
+    const zapier_submission = await fetch('https://hooks.zapier.com/hooks/catch/576272/bh4m1pl/', {
+        method: 'POST',
+        body: JSON.stringify(zapier_data)
+    });
+
+    const response = await zapier_submission.json()
 
     if (response.status !== 'success') return;
 
