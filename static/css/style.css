@@ -345,7 +345,7 @@ button:hover, .button:hover {
     cursor: pointer;
 }
 
-.thank-you .button { max-width:50%; float: right; clear: both; }
+.thank-you .button { max-width:50%; float: right; }
 
 form a {
     color: white;
