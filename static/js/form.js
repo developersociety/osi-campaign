@@ -33,7 +33,7 @@ const makeAPIcalls = async () => {
     if (response.status !== 'success') return;
 
     // redirect to thank you
-    window.location.href += `thank-you.html?name=${nameInput.value}`
+    window.location.href += `/thank-you.html?name=${nameInput.value}`
 }
 
 const handleSubmit = (event) => {
