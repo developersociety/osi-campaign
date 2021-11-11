@@ -7,26 +7,26 @@ const membershipInput = form.querySelector('input[name=membership]')
 
 const makeAPIcalls = async () => {
 
-  // Handle any errors from Checkout
-  var handleResult =  function (result) {
-    if (result.error) {
-      var displayError = document.getElementById('error-message');
-      displayError.textContent = result.error.message;
-    }
-  };
+    // Handle any errors from Checkout
+    var handleResult = function(result) {
+        if (result.error) {
+            var displayError = document.getElementById('error-message');
+            displayError.textContent = result.error.message;
+        }
+    };
 
-  if (response.status !== 'success') return;
+    if (response.status !== 'success') return;
+
     // redirect to thank you
     window.location.href += `thank-you.html?name=${nameInput.value}`
-  }
 }
 
 const handleSubmit = (event) => {
-  event.preventDefault()
-  submitButton.disabled = true
-  makeAPIcalls()
+    event.preventDefault()
+    submitButton.disabled = true
+    makeAPIcalls()
 }
 
 if (form) {
-  form.onsubmit = handleSubmit
+    form.onsubmit = handleSubmit
 }
