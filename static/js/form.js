@@ -7,11 +7,11 @@ const membershipInput = form.querySelector('input[name=membership]')
 
 const makeAPIcalls = async () => {
   // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
-  var PUBLISHABLE_KEY = 'pk_test_WCJLe4VIHyg3wdUQYvMaBa5K00z9hFMGJ2';
+
   // Replace with the domain you want your users to be redirected back to after payment
   var DOMAIN = location.href.replace(/[^/]*$/, '');
 
-  var stripe = Stripe(PUBLISHABLE_KEY);
+ //
 
   // Handle any errors from Checkout
   var handleResult =  function (result) {
@@ -21,38 +21,9 @@ const makeAPIcalls = async () => {
     }
   };
 
-  const zapier_data = {
-    name: nameInput.value,
-    email: emailInput.value,
-    country: countryInput.value,
-    membership: membershipInput.value,
-    'opt-in': true
-  }
-
-  const zapier_submission = await fetch('https://hooks.zapier.com/hooks/catch/576272/bh4m1pl/', {
-    method: 'POST',
-    body: JSON.stringify(zapier_data)
-  });
-
-  const response = await zapier_submission.json()
 
   if (response.status !== 'success') return;
 
-  // Make the call to Stripe.js to redirect to the checkout page
-  // with the sku or plan ID.
-  if (membershipInput.value === "individual") {
-    // handle payment
-    stripe
-      .redirectToCheckout({
-        mode: 'subscription',
-        lineItems: [{ price: 'price_1JjQ5LAL5YtKKJj5KS3lH6U9', quantity: 1 }],
-        successUrl:
-        DOMAIN + 'thank-you.html?session_id={CHECKOUT_SESSION_ID}' + `&name=${nameInput.value}`,
-        cancelUrl:
-        DOMAIN + 'index.html?status=cancelled'
-      })
-      .then(handleResult);
-  } else {
     // redirect to thank you
     window.location.href += `thank-you.html?name=${nameInput.value}`
   }
