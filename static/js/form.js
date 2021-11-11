@@ -6,12 +6,6 @@ const countryInput = form.querySelector('select[name=country]')
 const membershipInput = form.querySelector('input[name=membership]')
 
 const makeAPIcalls = async () => {
-  // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
-
-  // Replace with the domain you want your users to be redirected back to after payment
-  var DOMAIN = location.href.replace(/[^/]*$/, '');
-
- //
 
   // Handle any errors from Checkout
   var handleResult =  function (result) {
@@ -21,9 +15,7 @@ const makeAPIcalls = async () => {
     }
   };
 
-
   if (response.status !== 'success') return;
-
     // redirect to thank you
     window.location.href += `thank-you.html?name=${nameInput.value}`
   }
@@ -32,7 +24,6 @@ const makeAPIcalls = async () => {
 const handleSubmit = (event) => {
   event.preventDefault()
   submitButton.disabled = true
-
   makeAPIcalls()
 }
 
