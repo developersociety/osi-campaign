@@ -1,5 +1,5 @@
 async function fetchBadge() {
-    const fetchBadge = await fetch('../img/osi-badge-base.svg');
+    const fetchBadge = await fetch('/static/img/osi-badge-base.svg');
     const svgTemplate = await fetchBadge.text();
     return svgTemplate;
 }
