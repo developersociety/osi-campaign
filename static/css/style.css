@@ -169,6 +169,12 @@ aside form > *+* {
     font-weight: bold;
 }
 
+
+
+.member-list {
+    margin-top: 0;
+}
+
 .member-list--desktop {
     display: none;
 }
@@ -188,15 +194,19 @@ footer {
 }
 
 header, footer, main, aside {
-    margin: 0;
+    margin: 0 auto;
     padding: 1rem;
 }
 
-header div, footer div, main div, aside form {
+header div, main div, aside form {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+footer div {
+    max-width: var(--main-width);
     margin: 0 auto;
     padding: 1rem;
-    max-width: 960px;
-
 }
 
 #skiptocontent {
@@ -248,6 +258,7 @@ h4,
     font-size: min(max(1.5rem, 2.419vw), 1.5rem);
     line-height: 1;
     font-weight: bold;
+    margin-bottom: 0
 }
 
 h4 em {
@@ -260,6 +271,7 @@ aside form {
     color: white;
     border-radius: 8px;
     padding: 2rem;
+    margin-bottom: 3rem;
 }
 
 aside form h2, aside form h3 {
@@ -345,8 +357,6 @@ button:hover, .button:hover {
     cursor: pointer;
 }
 
-.thank-you .button { max-width:50%; float: right; }
-
 form a {
     color: white;
 }
@@ -401,6 +411,30 @@ footer {
     margin: 2rem 0 0 0;
 }
 
+hr {
+    height: 1px;
+    border: none;
+    margin: 1rem 0;
+    background: #e8e8e8;
+}
+
 .svg-container {
     width: 50%;
+}
+
+.split {
+    display: grid;
+}
+
+.split div {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    max-width: none;
+}
+
+@media all and (min-width: 600px) {
+    .split {
+        grid-template-columns: 40% 60%;
+    }
 }
